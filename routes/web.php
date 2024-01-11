@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\Halaman\FasilitasController;
+use App\Http\Controllers\Halaman\HomeController;
+use App\Http\Controllers\Halaman\KamarController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,4 +18,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('layout.main');
+});
+
+// Route Sesudah Login
+Route::prefix('hotel_axio')->group(function(){
+    Route::resource('kamar',KamarController::class); // Route Kamar 
+    Route::resource('home',HomeController::class); // Route Home
+    Route::resource('fasilitas_hotel',FasilitasController::class); // Route Fasilitas Hotel
 });
