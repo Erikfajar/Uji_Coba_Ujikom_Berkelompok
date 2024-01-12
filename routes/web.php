@@ -1,9 +1,11 @@
 <?php
 
-use App\Http\Controllers\Halaman\FasilitasController;
-use App\Http\Controllers\Halaman\HomeController;
-use App\Http\Controllers\Halaman\KamarController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Halaman\HomeController;
+use App\Http\Controllers\Halaman\AdminController;
+use App\Http\Controllers\Halaman\KamarController;
+use App\Http\Controllers\Halaman\FasilitasController;
+use App\Http\Controllers\Halaman\ResepsionisController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('layout.main');
+    return view('Auth.login');
 });
 
 // Route Sesudah Login
@@ -25,4 +27,10 @@ Route::prefix('hotel_axio')->group(function(){
     Route::resource('kamar',KamarController::class); // Route Kamar 
     Route::resource('home',HomeController::class); // Route Home
     Route::resource('fasilitas_hotel',FasilitasController::class); // Route Fasilitas Hotel
+    Route::resource('resepsionis',ResepsionisController::class); // Route hanya untuk Resepsionis
+
+    // ROute Untuk Adminnn
+    Route::get('admin_kamar',[AdminController::class,'kamar'])->name('admin_kamar');
+    Route::get('admin_fasilitas_hotel',[AdminController::class,'fasilitas_hotel'])->name('admin_fasilitas_hotel');
+
 });

@@ -26,6 +26,8 @@
       <link rel="stylesheet" href="{{asset('Template')}}/css/slicknav.css">
       <link rel="stylesheet" href="{{asset('Template')}}/css/style.css">
       <link rel="stylesheet" href="{{ asset('Template') }}/css/responsive.css"> 
+
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 
 <body>
@@ -45,19 +47,15 @@
                                     <ul id="navigation">
                                         <li><a class="{{ request()->is('hotel_axio/home')? 'active':'' }}" href="{{route('home.index')}}">Home</a></li>
                                         <li><a class="{{ request()->is('hotel_axio/kamar')? 'active':'' }}"  href="{{ route('kamar.index') }}">Kamar</a></li>
-                                        <li><a class="{{ request()->is('hotel_axio/fasilitas_hotel')? 'active':'' }}"  href="{{ route('fasilitas_hotel.index') }}">Kamar</a></li>
-                                        <li><a href="#">Resepsionis <i class="ti-angle-down"></i></a>
+                                        <li><a class="{{ request()->is('hotel_axio/fasilitas_hotel')? 'active':'' }}"  href="{{ route('fasilitas_hotel.index') }}">Fasilitas Hotel</a></li>
+                                        <li><a class="{{ request()->is('hotel_axio/resepsionis')? 'active':'' }}"  href="{{ route('resepsionis.index') }}">Resep</a></li>
+                                        {{-- <li><a class="{{ request()->is('hotel_axio/administrator')? 'active':'' }}"  href="{{ route('administrator.index') }}">Admin</a></li> --}}
+                                        <li><a  href="#">Admin</a>
                                             <ul class="submenu">
-                                                <li><a href="blog.html">blog</a></li>
-                                                <li><a href="single-blog.html">single-blog</a></li>
+                                                <li><a href="{{ route('admin_kamar') }}">Kamar</a></li>
+                                                <li><a href="{{ route('admin_fasilitas_hotel') }}">Fasilitas Hotel</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="#">Admin <i class="ti-angle-down"></i></a>
-                                            <ul class="submenu">
-                                                <li><a href="elements.html">elements</a></li>
-                                            </ul>
-                                        </li>
-                                      
                                     </ul>
                                 </nav>
                             </div>
@@ -107,57 +105,14 @@
 
     <!-- bradcam_area_start -->
     <div class="bradcam_area breadcam_bg_1">
-        <h3>Hotel Axio</h3>
+        <h3 id="nama_hotel">Hotel Axio</h3>
     </div>
     <!-- bradcam_area_end -->
     @yield('isi')
 
     <!-- forQuery_end-->
 
-    <!-- instragram_area_start -->
-    <div class="instragram_area">
-        <div class="single_instagram">
-            <img src="img/instragram/1.png" alt="">
-            <div class="ovrelay">
-                <a href="#">
-                    <i class="fa fa-instagram"></i>
-                </a>
-            </div>
-        </div>
-        <div class="single_instagram">
-            <img src="img/instragram/2.png" alt="">
-            <div class="ovrelay">
-                <a href="#">
-                    <i class="fa fa-instagram"></i>
-                </a>
-            </div>
-        </div>
-        <div class="single_instagram">
-            <img src="img/instragram/3.png" alt="">
-            <div class="ovrelay">
-                <a href="#">
-                    <i class="fa fa-instagram"></i>
-                </a>
-            </div>
-        </div>
-        <div class="single_instagram">
-            <img src="img/instragram/4.png" alt="">
-            <div class="ovrelay">
-                <a href="#">
-                    <i class="fa fa-instagram"></i>
-                </a>
-            </div>
-        </div>
-        <div class="single_instagram">
-            <img src="img/instragram/5.png" alt="">
-            <div class="ovrelay">
-                <a href="#">
-                    <i class="fa fa-instagram"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-    <!-- instragram_area_end -->
+
     
     <!-- footer -->
     <footer class="footer" >
@@ -343,6 +298,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
 @include('sweetalert::alert')
 <script src="{{ asset('vendor/sweetalert/sweetalert.all.js') }}"></script>
+
+{{-- Confirm Alert pemesanan --}}
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         var deleteButtons = document.querySelectorAll('.confirm-pemesanan');
@@ -368,7 +325,33 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         });
     });
 </script>
-
+{{-- Confirm Alert Delete --}}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var deleteButtons = document.querySelectorAll('.delete');
+        deleteButtons.forEach(function(button) {
+            button.addEventListener('click', function(event) {
+                event.preventDefault();
+                var form = this.closest('form');
+                Swal.fire({
+                    title: 'Konfirmasi hapus',
+                    text: 'Apakah Anda yakin untuk hapus data ini?',
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#d33',
+                    cancelButtonColor: '#3085d6',
+                    confirmButtonText: 'Ya, hapus!',
+                    cancelButtonText: 'Batal'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        form.submit();
+                    }
+                });
+            });
+        });
+    });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -1,20 +1,27 @@
 @extends('Layout.main')
 
 @section('isi')
-    <!-- Start Sample Area -->
+    <!-- Untuk -->
     <section class="sample-text-area">
         <div class="container box_1170">
-            <h2 >Kamar VVIP</h2>
+            {{-- <h2>Kamar VVIP</h2>
             <div class="card text-bg-dark">
                 <img src="{{ asset('Template/img/rooms/1.png') }}" height="300px" class="card-img" alt="...">
-                {{-- <div class="card-img-overlay">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <p class="card-text"><small>Last updated 3 mins ago</small></p>
-                </div> --}}
-              </div>
+             
+                <h4>Fasilitas</h4>
+            </div> --}}
+            <div class="card mb-3">
+                <img src="{{ asset('Template/img/rooms/1.png') }}" height="350px" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h2 class="card-title">Card title</h2>
+                    <h4 class="card-text">Fasilitas:</h4>
+                    <p class="card-text">Fasilitas:</p>
+                </div>
+            </div>
+
         </div>
 
     </section>
-   
+
+
 @endsection
