@@ -12,22 +12,28 @@
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
     <!-- Place favicon.ico in the root directory -->
 
-    
-      <!-- CSS here -->
-      <link rel="stylesheet" href="{{asset('Template')}}/css/bootstrap.min.css">
-      <link rel="stylesheet" href="{{asset('Template')}}/css/owl.carousel.min.css">
-      <link rel="stylesheet" href="{{asset('Template')}}/css/magnific-popup.css">
-      <link rel="stylesheet" href="{{asset('Template')}}/css/font-awesome.min.css">
-      <link rel="stylesheet" href="{{asset('Template')}}/css/themify-icons.css">
-      <link rel="stylesheet" href="{{asset('Template')}}/css/nice-select.css">
-      <link rel="stylesheet" href="{{asset('Template')}}/css/flaticon.css">
-      <link rel="stylesheet" href="{{asset('Template')}}/css/gijgo.css">
-      <link rel="stylesheet" href="{{asset('Template')}}/css/animate.css">
-      <link rel="stylesheet" href="{{asset('Template')}}/css/slicknav.css">
-      <link rel="stylesheet" href="{{asset('Template')}}/css/style.css">
-      <link rel="stylesheet" href="{{ asset('Template') }}/css/responsive.css"> 
 
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- CSS here -->
+    <link rel="stylesheet" href="{{ asset('Template') }}/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('Template') }}/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="{{ asset('Template') }}/css/magnific-popup.css">
+    <link rel="stylesheet" href="{{ asset('Template') }}/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ asset('Template') }}/css/themify-icons.css">
+    <link rel="stylesheet" href="{{ asset('Template') }}/css/nice-select.css">
+    <link rel="stylesheet" href="{{ asset('Template') }}/css/flaticon.css">
+    <link rel="stylesheet" href="{{ asset('Template') }}/css/gijgo.css">
+    <link rel="stylesheet" href="{{ asset('Template') }}/css/animate.css">
+    <link rel="stylesheet" href="{{ asset('Template') }}/css/slicknav.css">
+    <link rel="stylesheet" href="{{ asset('Template') }}/css/style.css">
+    <link rel="stylesheet" href="{{ asset('Template') }}/css/responsive.css">
+
+    {{-- Cdnnn Trix Editor --}}
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.8/dist/trix.css">
+    <script type="text/javascript" src="https://unpkg.com/trix@2.0.8/dist/trix.umd.min.js"></script>
+
+    {{-- cdnnn bootstrap --}}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 
 <body>
@@ -45,15 +51,20 @@
                             <div class="main-menu  d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a class="{{ request()->is('hotel_axio/home')? 'active':'' }}" href="{{route('home.index')}}">Home</a></li>
-                                        <li><a class="{{ request()->is('hotel_axio/kamar')? 'active':'' }}"  href="{{ route('kamar.index') }}">Kamar</a></li>
-                                        <li><a class="{{ request()->is('hotel_axio/fasilitas_hotel')? 'active':'' }}"  href="{{ route('fasilitas_hotel.index') }}">Fasilitas Hotel</a></li>
-                                        <li><a class="{{ request()->is('hotel_axio/resepsionis')? 'active':'' }}"  href="{{ route('resepsionis.index') }}">Resep</a></li>
+                                        <li><a class="{{ request()->is('hotel_axio/home') ? 'active' : '' }}"
+                                                href="{{ route('home.index') }}">Home</a></li>
+                                        <li><a class="{{ request()->is('hotel_axio/kamar') ? 'active' : '' }}"
+                                                href="{{ route('kamar.index') }}">Kamar</a></li>
+                                        <li><a class="{{ request()->is('hotel_axio/fasilitas_hotel') ? 'active' : '' }}"
+                                                href="{{ route('fasilitas_hotel.index') }}">Fasilitas Hotel</a></li>
+                                        <li><a class="{{ request()->is('hotel_axio/resepsionis') ? 'active' : '' }}"
+                                                href="{{ route('resepsionis.index') }}">Resep</a></li>
                                         {{-- <li><a class="{{ request()->is('hotel_axio/administrator')? 'active':'' }}"  href="{{ route('administrator.index') }}">Admin</a></li> --}}
-                                        <li><a  href="#">Admin</a>
+                                        <li><a href="#">Admin</a>
                                             <ul class="submenu">
                                                 <li><a href="{{ route('admin_kamar') }}">Kamar</a></li>
-                                                <li><a href="{{ route('admin_fasilitas_hotel') }}">Fasilitas Hotel</a></li>
+                                                <li><a href="{{ route('admin_fasilitas_hotel') }}">Fasilitas Hotel</a>
+                                                </li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -113,9 +124,9 @@
     <!-- forQuery_end-->
 
 
-    
+
     <!-- footer -->
-    <footer class="footer" >
+    <footer class="footer">
         <div class="footer_top">
             <div class="container">
                 <div class="row">
@@ -124,24 +135,24 @@
                             <h3 class="footer_title">
                                 address
                             </h3>
-                            <p class="footer_text" >  200, Green road, Mongla, <br>
-                                    New Yor City USA</p>
+                            <p class="footer_text"> 200, Green road, Mongla, <br>
+                                New Yor City USA</p>
                             <a href="#" class="line-button">Get Direction</a>
                         </div>
                     </div>
                     <div class="col-xl-3 col-md-6 col-lg-3">
                         <div class="footer_widget">
                             <h3 class="footer_title">
-                                    Reservation
+                                Reservation
                             </h3>
-                            <p class="footer_text" >+10 367 267 2678 <br>
-                                    reservation@montana.com</p>
+                            <p class="footer_text">+10 367 267 2678 <br>
+                                reservation@montana.com</p>
                         </div>
                     </div>
                     <div class="col-xl-2 col-md-6 col-lg-2">
                         <div class="footer_widget">
                             <h3 class="footer_title">
-                                    Navigation
+                                Navigation
                             </h3>
                             <ul>
                                 <li><a href="#">Home</a></li>
@@ -158,7 +169,7 @@
                             </h3>
                             <form action="#" class="newsletter_form">
                                 <input type="text" placeholder="Enter your mail">
-                                <button type="submit" >Sign Up</button>
+                                <button type="submit">Sign Up</button>
                             </form>
                             <p class="newsletter_text">Subscribe newsletter to get updates</p>
                         </div>
@@ -172,9 +183,14 @@
                 <div class="row">
                     <div class="col-xl-8 col-md-7 col-lg-9">
                         <p class="copy_right">
-                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            Copyright &copy;
+                            <script>
+                                document.write(new Date().getFullYear());
+                            </script> All rights reserved | This template is made with <i
+                                class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com"
+                                target="_blank">Colorlib</a>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                         </p>
                     </div>
                     <div class="col-xl-4 col-md-5 col-lg-3">
@@ -206,50 +222,50 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <!-- form itself end-->
     <form id="test-form" class="white-popup-block mfp-hide">
         <div class="popup_box ">
-                <div class="popup_inner">
-                    <h3>Check Availability</h3>
-                    <form action="#">
-                        <div class="row">
-                            <div class="col-xl-6">
-                                <input id="datepicker" placeholder="Check in date">
-                            </div>
-                            <div class="col-xl-6">
-                                <input id="datepicker2" placeholder="Check out date">
-                            </div>
-                            <div class="col-xl-6">
-                                <select class="form-select wide" id="default-select" class="">
-                                    <option data-display="Adult">1</option>
-                                    <option value="1">2</option>
-                                    <option value="2">3</option>
-                                    <option value="3">4</option>
-                                </select>
-                            </div>
-                            <div class="col-xl-6">
-                                <select class="form-select wide" id="default-select" class="">
-                                    <option data-display="Children">1</option>
-                                    <option value="1">2</option>
-                                    <option value="2">3</option>
-                                    <option value="3">4</option>
-                                </select>
-                            </div>
-                            <div class="col-xl-12">
-                                <select class="form-select wide" id="default-select" class="">
-                                    <option data-display="Room type">Room type</option>
-                                    <option value="1">Laxaries Rooms</option>
-                                    <option value="2">Deluxe Room</option>
-                                    <option value="3">Signature Room</option>
-                                    <option value="4">Couple Room</option>
-                                </select>
-                            </div>
-                            <div class="col-xl-12">
-                                <button type="submit" class="boxed-btn3">Check Availability</button>
-                            </div>
+            <div class="popup_inner">
+                <h3>Check Availability</h3>
+                <form action="#">
+                    <div class="row">
+                        <div class="col-xl-6">
+                            <input id="datepicker" placeholder="Check in date">
                         </div>
-                    </form>
-                </div>
+                        <div class="col-xl-6">
+                            <input id="datepicker2" placeholder="Check out date">
+                        </div>
+                        <div class="col-xl-6">
+                            <select class="form-select wide" id="default-select" class="">
+                                <option data-display="Adult">1</option>
+                                <option value="1">2</option>
+                                <option value="2">3</option>
+                                <option value="3">4</option>
+                            </select>
+                        </div>
+                        <div class="col-xl-6">
+                            <select class="form-select wide" id="default-select" class="">
+                                <option data-display="Children">1</option>
+                                <option value="1">2</option>
+                                <option value="2">3</option>
+                                <option value="3">4</option>
+                            </select>
+                        </div>
+                        <div class="col-xl-12">
+                            <select class="form-select wide" id="default-select" class="">
+                                <option data-display="Room type">Room type</option>
+                                <option value="1">Laxaries Rooms</option>
+                                <option value="2">Deluxe Room</option>
+                                <option value="3">Signature Room</option>
+                                <option value="4">Couple Room</option>
+                            </select>
+                        </div>
+                        <div class="col-xl-12">
+                            <button type="submit" class="boxed-btn3">Check Availability</button>
+                        </div>
+                    </div>
+                </form>
             </div>
+        </div>
     </form>
-<!-- form itself end -->
+    <!-- form itself end -->
 
 
     <!-- JS here -->
@@ -284,74 +300,76 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         $('#datepicker').datepicker({
             iconsLibrary: 'fontawesome',
             icons: {
-             rightIcon: '<span class="fa fa-caret-down"></span>'
-         }
+                rightIcon: '<span class="fa fa-caret-down"></span>'
+            }
         });
         $('#datepicker2').datepicker({
             iconsLibrary: 'fontawesome',
             icons: {
-             rightIcon: '<span class="fa fa-caret-down"></span>'
-         }
+                rightIcon: '<span class="fa fa-caret-down"></span>'
+            }
 
         });
     </script>
 
-@include('sweetalert::alert')
-<script src="{{ asset('vendor/sweetalert/sweetalert.all.js') }}"></script>
+    @include('sweetalert::alert')
+    <script src="{{ asset('vendor/sweetalert/sweetalert.all.js') }}"></script>
 
-{{-- Confirm Alert pemesanan --}}
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var deleteButtons = document.querySelectorAll('.confirm-pemesanan');
-        deleteButtons.forEach(function(button) {
-            button.addEventListener('click', function(event) {
-                event.preventDefault();
-                var form = this.closest('form');
-                Swal.fire({
-                    title: 'Konfirmasi confirm',
-                    text: 'Apakah Anda yakin untuk melanjutkan pemesanan?',
-                    icon: 'warning',
-                    showCancelButton: true,
-                    confirmButtonColor: '#d33',
-                    cancelButtonColor: '#3085d6',
-                    confirmButtonText: 'Ya, lanjutkan!',
-                    cancelButtonText: 'Batal'
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        form.submit();
-                    }
+    {{-- Confirm Alert pemesanan --}}
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var deleteButtons = document.querySelectorAll('.confirm-pemesanan');
+            deleteButtons.forEach(function(button) {
+                button.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    var form = this.closest('form');
+                    Swal.fire({
+                        title: 'Konfirmasi confirm',
+                        text: 'Apakah Anda yakin untuk melanjutkan pemesanan?',
+                        icon: 'warning',
+                        showCancelButton: true,
+                        confirmButtonColor: '#d33',
+                        cancelButtonColor: '#3085d6',
+                        confirmButtonText: 'Ya, lanjutkan!',
+                        cancelButtonText: 'Batal'
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            form.submit();
+                        }
+                    });
                 });
             });
         });
-    });
-</script>
-{{-- Confirm Alert Delete --}}
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var deleteButtons = document.querySelectorAll('.delete');
-        deleteButtons.forEach(function(button) {
-            button.addEventListener('click', function(event) {
-                event.preventDefault();
-                var form = this.closest('form');
-                Swal.fire({
-                    title: 'Konfirmasi hapus',
-                    text: 'Apakah Anda yakin untuk hapus data ini?',
-                    icon: 'warning',
-                    showCancelButton: true,
-                    confirmButtonColor: '#d33',
-                    cancelButtonColor: '#3085d6',
-                    confirmButtonText: 'Ya, hapus!',
-                    cancelButtonText: 'Batal'
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        form.submit();
-                    }
+    </script>
+    {{-- Confirm Alert Delete --}}
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var deleteButtons = document.querySelectorAll('.delete');
+            deleteButtons.forEach(function(button) {
+                button.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    var form = this.closest('form');
+                    Swal.fire({
+                        title: 'Konfirmasi hapus',
+                        text: 'Apakah Anda yakin untuk hapus data ini?',
+                        icon: 'warning',
+                        showCancelButton: true,
+                        confirmButtonColor: '#d33',
+                        cancelButtonColor: '#3085d6',
+                        confirmButtonText: 'Ya, hapus!',
+                        cancelButtonText: 'Batal'
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            form.submit();
+                        }
+                    });
                 });
             });
         });
-    });
-</script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
