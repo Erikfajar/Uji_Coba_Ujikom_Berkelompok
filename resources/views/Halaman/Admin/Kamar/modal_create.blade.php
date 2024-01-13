@@ -7,13 +7,18 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
+          <form action="" method="post">
           <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            <label for="exampleFormControlInput1" class="form-label">Tipe Kamar</label>
+            <input type="text" maxlength="100" class="form-control" id="exampleFormControlInput1" placeholder="Masukan Tipe Kamar">
           </div>
           <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <label for="exampleFormControlTextarea1" class="form-label">Foto Kamar</label>
+            <input type="file" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Jumlah Kamar</label>
+            <input type="text" maxlength="11" class="form-control">
           </div>
           <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Fasilitas Kamar</label>
@@ -23,8 +28,9 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Understood</button>
+          <button type="submit" class="btn btn-primary">Simpan</button>
         </div>
+      </form>
       </div>
     </div>
   </div>

@@ -15,8 +15,9 @@
                     <thead>
                         <tr>
                             <th scope="col" style="text-align: center">#</th>
-                            <th scope="col" style="text-align: center">First</th>
-                            <th scope="col" style="text-align: center">Last</th>
+                            <th scope="col" style="text-align: center">Tipe Kamar</th>
+                            <th scope="col" style="text-align: center">Fasilitas</th>
+                            <th scope="col" style="text-align: center">Jumlah Kamar</th>
                             <th scope="col" style="text-align: center">Action</th>
                         </tr>
                     </thead>
@@ -25,6 +26,7 @@
                             <th style="text-align: center" scope="row">1</th>
                             <td style="text-align: center">Mark</td>
                             <td style="text-align: center">Otto</td>
+                            <td style="text-align: center">13</td>
                             <td style="text-align: center">
                                 <button type="button" class="btn btn-sm btn-warning" data-bs-toggle="modal"
                                 data-bs-target="#edit_kamar">Edit</button>
