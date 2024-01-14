@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Halaman\HomeController;
 use App\Http\Controllers\Halaman\AdminController;
@@ -18,9 +20,14 @@ use App\Http\Controllers\Halaman\ResepsionisController;
 |
 */
 
-Route::get('/', function () {
-    return view('Auth.login');
-});
+// Route::get('/', function () {
+//     return view('Auth.login');
+// });
+
+Route::get('/',[LoginController::class,'login'])->name('login');
+Route::post('auth',[LoginController::class,'auth'])->name('auth');
+
+Route::post('registrasi',[RegisController::class,'registrasi'])->name('registrasi');
 
 // Route Sesudah Login
 Route::prefix('hotel_axio')->group(function(){
