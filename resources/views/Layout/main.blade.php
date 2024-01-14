@@ -80,27 +80,9 @@
                         </div>
                         <div class="col-xl-5 col-lg-4 d-none d-lg-block">
                             <div class="book_room">
-                                <div class="socail_links">
-                                    <ul>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fa fa-facebook-square"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fa fa-twitter"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fa fa-instagram"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                <h5 style="color: white">{{ Auth::user()->nama }}</h5>
                                 <div class="book_btn d-none d-lg-block">
-                                  <h4 style="color: white">{{ Auth::user()->nama }}</h4>
+                                    <button class="btn btn-primary">Logout >></button>
                                 </div>
                             </div>
                         </div>
