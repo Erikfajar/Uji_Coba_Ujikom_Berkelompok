@@ -27,7 +27,7 @@
 
       <div class="container b-container" id="b-container">
         <form class="form" id="b-form" method="" action="">
-          <h2 class="form_title title">Sign in to Website</h2>
+          <h2 class="form_title title">Sign in</h2>
           <div class="form__icons">
               <img decoding="async" class="form__icon" src="images/facebook.svg" alt="facebook">
               <img decoding="async" class="form__icon" src="images/linkedin.svg" alt="linkedin">
@@ -47,15 +47,15 @@
         <div class="switch__container" id="switch-c1">
           <h2 class="switch__title title">Welcome Back !</h2>
           <p class="switch__description description">
-            To keep connected with us please login with your personal info
+            Untuk tetap terhubung dengan kami, silahkan login dengan informasi pribadi Anda
           </p>
           <button class="switch__button button switch-btn">SIGN IN</button>
         </div>
 
         <div class="switch__container is-hidden" id="switch-c2">
-          <h2 class="switch__title title">Hello Friend !</h2>
+          <h2 class="switch__title title">Hello, Teman !</h2>
           <p class="switch__description description">
-            Enter your personal details and start journey with us
+            Daftarkan diri anda dan mulai gunakan layanan kami segera
           </p>
           <button class="switch__button button switch-btn">SIGN UP</button>
         </div>
