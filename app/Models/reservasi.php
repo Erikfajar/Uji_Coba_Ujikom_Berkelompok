@@ -13,6 +13,7 @@ class reservasi extends Model
         'id_user', 'email', 'no_hp', 'nama_tamu', 'id_kamar', 'tgl_cekIn', 'tgl_cekOut', 'jumlah_kamar'
     ];
 
+    //belongsTo menerima data 
     public function user(){
         return $this->belongsTo(User::class, 'id_user', 'id_user');
     }
