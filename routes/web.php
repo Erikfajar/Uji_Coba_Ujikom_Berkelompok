@@ -30,7 +30,7 @@ Route::post('auth',[LoginController::class,'auth'])->name('auth');
 Route::post('registrasi',[RegisController::class,'registrasi'])->name('registrasi');
 
 // Route Sesudah Login
-Route::prefix('hotel_axio')->group(function(){
+Route::prefix('hotel_kita')->group(function(){
     Route::resource('kamar',KamarController::class); // Route Kamar 
     Route::resource('home',HomeController::class); // Route Home
     Route::resource('fasilitas_hotel',FasilitasController::class); // Route Fasilitas Hotel
