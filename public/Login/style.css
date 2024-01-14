@@ -12,9 +12,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: "Montserrat", sans-serif;
+    /* font-family: "Montserrat", sans-serif; */
+    font-family: 'JetBrains Mono', monospace;
     font-size: 12px;
-    background-color: #ecf0f3;
+    background-color: #7FC7D9;
     color: #a0a5a8;
   }
   
