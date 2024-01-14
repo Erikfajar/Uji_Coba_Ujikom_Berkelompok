@@ -24,6 +24,10 @@ class User extends Authenticatable
         'role',
     ];
 
+    public function reservasi(){
+        return $this->hasMany(Reservasi::class);
+    }
+
     /**
      * The attributes that should be hidden for serialization.
      *

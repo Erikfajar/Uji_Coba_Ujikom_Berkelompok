@@ -13,7 +13,7 @@ class Kamar extends Model
         'tipe_kamar', 'fasilitas', 'poto_kamar', 'jumlah_kamar'
     ];
 
-    public function user(){
-        return $this->hasMany(User::class);
+    public function reservasi(){
+        return $this->hasMany(Reservasi::class);
     }
 }
