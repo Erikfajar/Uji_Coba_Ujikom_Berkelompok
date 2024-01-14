@@ -16,11 +16,12 @@ class reservasi extends Model
     ];
 
     //belongsTo menerima data 
-    public function user(){
-        return $this->belongsTo(User::class, 'id_user', 'id_user');
-    }
+   public function user()
+   {
+    return $this->belongsTo(User::class,'id_user','id_user');
+   }
 
     public function kamar(){
-        return $this->belongsTo(Kamar::class, 'id_kamar', 'id_kamar');
+        return $this->belongsTo(Kamar::class,'id_kamar','id_kamar');
     }
 }
