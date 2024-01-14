@@ -116,7 +116,7 @@
 
     <!-- bradcam_area_start -->
     <div class="bradcam_area breadcam_bg_1">
-        <h3 id="nama_hotel">Hotel Axio</h3>
+        <h3 id="nama_hotel">Hotel Tropikana</h3>
     </div>
     <!-- bradcam_area_end -->
     @yield('isi')
