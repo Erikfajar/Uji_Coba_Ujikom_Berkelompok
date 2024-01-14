@@ -15,6 +15,7 @@ class LoginController extends Controller
 
     public function auth(Request $request)
     { 
+        // dd($request);
         $validasi = $request->validate([
             'username' => 'required',
             'password' => 'required',
@@ -22,7 +23,9 @@ class LoginController extends Controller
         if (Auth::attempt($validasi)) {
             $request->session()->regenerate();
  
-            return redirect()->intended('hotel_axio/home');
+            return redirect()->intended('hotel_kita/home');
         }
+
+        return back();
     }
 }
