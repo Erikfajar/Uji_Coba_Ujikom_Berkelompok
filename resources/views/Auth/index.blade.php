@@ -34,7 +34,7 @@
               <img decoding="async" class="form__icon" src="images/twitter.svg" alt="twitter">
           </div>
           <span class="form__span">or use your email account</span>
-          <input class="form__input" type="text" placeholder="Email">
+          <input class="form__input" type="text" placeholder="Username">
           <input class="form__input" type="password" placeholder="Password"><a class="form__link">Forgot your password?</a>
           <button class="form__button button submit">SIGN IN</button>
         </form>
