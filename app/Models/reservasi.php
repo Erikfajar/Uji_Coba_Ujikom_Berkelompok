@@ -9,6 +9,8 @@ class reservasi extends Model
 {
     use HasFactory;
     protected $table = 'reservasi';
+    public $primaryKey = 'id_reservasi';
+    public $timestamps = false;
     protected $fillable = [
         'id_user', 'email', 'no_hp', 'nama_tamu', 'id_kamar', 'tgl_cekIn', 'tgl_cekOut', 'jumlah_kamar'
     ];
