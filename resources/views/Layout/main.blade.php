@@ -51,13 +51,13 @@
                             <div class="main-menu  d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a class="{{ request()->is('hotel_axio/home') ? 'active' : '' }}"
+                                        <li><a class="{{ request()->is('hotel_kita/home') ? 'active' : '' }}"
                                                 href="{{ route('home.index') }}">Home</a></li>
-                                        <li><a class="{{ request()->is('hotel_axio/kamar') ? 'active' : '' }}"
+                                        <li><a class="{{ request()->is('hotel_kita/kamar') ? 'active' : '' }}"
                                                 href="{{ route('kamar.index') }}">Kamar</a></li>
-                                        <li><a class="{{ request()->is('hotel_axio/fasilitas_hotel') ? 'active' : '' }}"
+                                        <li><a class="{{ request()->is('hotel_kita/fasilitas_hotel') ? 'active' : '' }}"
                                                 href="{{ route('fasilitas_hotel.index') }}">Fasilitas Hotel</a></li>
-                                        <li><a class="{{ request()->is('hotel_axio/resepsionis') ? 'active' : '' }}"
+                                        <li><a class="{{ request()->is('hotel_kita/resepsionis') ? 'active' : '' }}"
                                                 href="{{ route('resepsionis.index') }}">Resep</a></li>
                                         {{-- <li><a class="{{ request()->is('hotel_axio/administrator')? 'active':'' }}"  href="{{ route('administrator.index') }}">Admin</a></li> --}}
                                         <li><a href="#">Admin</a>
@@ -116,7 +116,7 @@
 
     <!-- bradcam_area_start -->
     <div class="bradcam_area breadcam_bg_1">
-        <h3 id="nama_hotel">Hotel Tropikana</h3>
+        <h3 id="nama_hotel">Hotel Kita</h3>
     </div>
     <!-- bradcam_area_end -->
     @yield('isi')
