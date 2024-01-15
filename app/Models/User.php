@@ -17,6 +17,7 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+
     public $primaryKey = 'id_user';
     public $timestamps = false;
     protected $fillable = [
@@ -27,7 +28,7 @@ class User extends Authenticatable
     ];
 
     public function reservasi(){
-        return $this->hasMany(Reservasi::class);
+        return $this->hasMany(Reservasi::class,'id_user','id_user');
     }
 
     /**

@@ -26,7 +26,8 @@
       </div>
 
       <div class="container b-container" id="b-container">
-        <form class="form" id="b-form" method="" action="">
+        <form class="form" id="b-form" method="post" action="{{ route('auth') }}">
+          @csrf
           <h2 class="form_title title">Sign in</h2>
           <div class="form__icons">
               <img decoding="async" class="form__icon" src="images/facebook.svg" alt="facebook">
@@ -34,9 +35,9 @@
               <img decoding="async" class="form__icon" src="images/twitter.svg" alt="twitter">
           </div>
           <span class="form__span">or use your email account</span>
-          <input class="form__input" type="text" placeholder="Username">
-          <input class="form__input" type="password" placeholder="Password"><a class="form__link">Forgot your password?</a>
-          <button class="form__button button submit">SIGN IN</button>
+          <input class="form__input" type="text" placeholder="Username" name="username">
+          <input class="form__input" type="password" name="password" placeholder="Password"><a class="form__link">Forgot your password?</a>
+          <button class="form__button button ">SIGN IN</button>
         </form>
       </div>
 

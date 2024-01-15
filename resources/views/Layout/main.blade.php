@@ -100,7 +100,7 @@
                                     </ul>
                                 </div>
                                 <div class="book_btn d-none d-lg-block">
-                                    <a class="popup-with-form" href="#test-form">Book A Room</a>
+                                  <h4 style="color: white">{{ Auth::user()->nama }}</h4>
                                 </div>
                             </div>
                         </div>
